@@ -6,5 +6,6 @@ class AppRouter {
     switch (setting.name) {
       
     }
+    return null;
   }
 }

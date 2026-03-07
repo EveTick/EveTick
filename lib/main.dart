@@ -1,4 +1,4 @@
-import 'package:evetick/features/onboarding/presentation/screens/onboarding_screen.dart';
+import 'package:evetick/features/auth/presentation/screens/sign_in.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,9 +10,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingScreen(),
+      home: SignIn(),
     );
   }
 }
