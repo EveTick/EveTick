@@ -4,8 +4,8 @@ import 'package:evetick/features/auth/presentation/widgets/method.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+class SignInScreen extends StatelessWidget {
+  const SignInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,9 +13,12 @@ class SignIn extends StatelessWidget {
       body: Stack(
         children: [
           Positioned.fill(
-            child: Image.asset(
-              'assets/images/signin_back.png',
-              fit: BoxFit.cover,
+            child: InkWell(
+              onTap: (){},
+              child: Image.asset(
+                'assets/images/signin_back.png',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Positioned.fill(
