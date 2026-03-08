@@ -1,23 +1,26 @@
 import 'package:evetick/core/const/app_color.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
 class Button extends StatelessWidget {
-   Button({super.key, required this.action, required this.width});
+  Button({super.key, required this.action, required this.width, this.onTap});
 
   String action;
   double width;
+  VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 48,
+    return SizedBox(
       width: width,
-      decoration: BoxDecoration(
-        color: AppColor.orange,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Center(
+      height: 48,
+      child: ElevatedButton(
+        onPressed: onTap,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColor.orange,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
         child: Text(
           action,
           style: TextStyle(
@@ -27,7 +30,6 @@ class Button extends StatelessWidget {
           ),
         ),
       ),
-    )
-    ;
+    );
   }
 }
