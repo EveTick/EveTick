@@ -1,7 +1,9 @@
 import 'package:evetick/core/const/app_color.dart';
+import 'package:evetick/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:evetick/features/onboarding/presentation/screens/onboarding_screen2.dart';
 import 'package:evetick/features/onboarding/presentation/screens/onboarding_screen1.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -23,6 +25,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         currentIndex = pageController.page!.round();
       });
     });
+    context.read<OnboardingCubit>().isNew();
   }
 
   @override

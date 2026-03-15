@@ -1,7 +1,7 @@
 import 'package:evetick/core/const/app_color.dart';
 import 'package:evetick/core/const/widgets/button.dart';
 import 'package:evetick/features/onboarding/presentation/screens/onboarding_screen.dart';
-import 'package:evetick/features/onboarding/widget/custom_indicator.dart';
+import 'package:evetick/features/onboarding/presentation/widget/custom_indicator.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen2 extends StatefulWidget {

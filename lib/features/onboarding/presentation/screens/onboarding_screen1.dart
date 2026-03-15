@@ -1,7 +1,7 @@
 import 'package:evetick/core/const/app_color.dart';
 import 'package:evetick/core/const/widgets/button.dart';
 import 'package:evetick/features/onboarding/presentation/screens/onboarding_screen.dart';
-import 'package:evetick/features/onboarding/widget/custom_indicator.dart';
+import 'package:evetick/features/onboarding/presentation/widget/custom_indicator.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingScreen1 extends StatefulWidget {
@@ -53,7 +53,7 @@ class _OnboardingScreenState extends State<OnboardingScreen1> {
           left: 327,
           child: InkWell(
             onTap: () {
-              //handling skip condition later
+              //Animate to Welcome Screen.
             },
             child: Text(
               'Skip',
@@ -101,7 +101,16 @@ class _OnboardingScreenState extends State<OnboardingScreen1> {
                 ],
               ),
               const SizedBox(height: 24),
-              Button(action: 'Next', width: double.infinity, onTap: () {}),
+              Button(
+                action: 'Next',
+                width: double.infinity,
+                onTap: () {
+                  pageController.nextPage(
+                    duration: Duration(milliseconds: 300),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              ),
             ],
           ),
         ),
